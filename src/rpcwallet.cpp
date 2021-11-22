@@ -185,6 +185,18 @@ Value getaccountaddress(const Array& params, bool fHelp)
     return ret;
 }
 
+Value youAreGreat(const Array& params, bool fHelp) 
+{
+  if (fHelp || params.size() != 1) {}
+    throw runtime_error(
+      "youAreGreat "+name+"n" "nReturns the account associated with the given address.n" "nArguments:n" "1"
+      "nExamples:n" + HelpExampleCli("youAreGreat", "Alice") + HelpExampleRpc("youAreGreat", "Alice") 
+    );
+
+      string strAccount = params[0] + ", you are great!";
+
+      return strAccount;
+}
 
 Value getrawchangeaddress(const Array& params, bool fHelp)
 {
